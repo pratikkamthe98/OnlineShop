@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'orders/index'
+      get 'orders/show'
+      get 'orders/new'
+    end
+  end
+  namespace :api do
+    namespace :v1 do
+      get 'carts/show'
+    end
+  end
+  namespace :api do
+    namespace :v1 do
       get 'products/index'
       post 'products/create'
       get '/show/:id', to: 'products#show'
